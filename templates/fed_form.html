@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <h2>Share your EXPERIENCE / FEEDBACK / OPINION</h2>
+    <form method="post">
+        <label for="fname"><b>Faculty ID: </b></label>
+        <br>
+        <input type="text" name="fid" placeholder="Faculty Name" value="{{ request.form['fid'] }}">
+        </input>
+        <br>
+        <label for="fname"><b>Faculty Name </b></label>
+        <br>
+        <input type="text" name="fname" placeholder="Faculty Name" value="{{ request.form['fname'] }}">
+        </input>
+        <br>
+        <br>
+        <label for="content"><b>Write your Experience</b></label>
+        <br>
+        <textarea name="comment" placeholder="Write your Experience" rows="10" cols="50">{{ request.form['comment'] }}</textarea>
+
+        <br>
+
+        <button type="submit">Submit</button>
+    </form>
+</center>
+{% endblock %}

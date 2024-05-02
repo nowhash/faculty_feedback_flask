@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+    <h2>Shared EXPERIENCE || Archive</h2>
+</center>
+
+{% for faculty in data %}
+<div class='message'>
+    <h3>Faculty ID: {{faculty['fid'] }}</h3>
+    <h3>Faculty Name: {{ faculty['fname'] }}</h3>
+    <p><b>Experience:</b><br> {{ faculty['comment'] }}</p>
+</div>
+
+{% endfor %}
+
+{% endblock %}
